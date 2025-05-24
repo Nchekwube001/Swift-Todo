@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		15BDFEFE2DE27EB900FA96FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 15BDFEFD2DE27EB900FA96FB /* FirebaseAuth */; };
+		15BDFF002DE27EB900FA96FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 15BDFEFF2DE27EB900FA96FB /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		15A624062DC3B4A6004B8163 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BDFEFE2DE27EB900FA96FB /* FirebaseAuth in Frameworks */,
+				15BDFF002DE27EB900FA96FB /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = TodoApp;
 			packageProductDependencies = (
+				15BDFEFD2DE27EB900FA96FB /* FirebaseAuth */,
+				15BDFEFF2DE27EB900FA96FB /* FirebaseFirestore */,
 			);
 			productName = TodoApp;
 			productReference = 15A623F52DC3B4A4004B8163 /* TodoApp.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 15A623EC2DC3B4A4004B8163;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				15BDFEFC2DE27EB900FA96FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 15A623F62DC3B4A4004B8163 /* Products */;
 			projectDirPath = "";
@@ -399,6 +411,7 @@
 				DEVELOPMENT_TEAM = 2T8B7ZJJ7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Todo List";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,7 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.franco.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -428,6 +441,7 @@
 				DEVELOPMENT_TEAM = 2T8B7ZJJ7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Todo List";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.franco.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -558,6 +572,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15BDFEFC2DE27EB900FA96FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15BDFEFD2DE27EB900FA96FB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15BDFEFC2DE27EB900FA96FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		15BDFEFF2DE27EB900FA96FB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15BDFEFC2DE27EB900FA96FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15A623ED2DC3B4A4004B8163 /* Project object */;
 }
