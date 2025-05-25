@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    @StateObject var contentViewModel = ContentViewVM(currentUserId: "", handler: nil)
+    @ViewBuilder
+    var accountView:some View {
+        TabView{
+            TodoListView(userId: contentViewModel.currentUserId)
+                .tabItem(){
+                    Label("Home", systemImage: "house")
+                }
+            ProfileView()
+                .tabItem(){
+                    Label("Profile", systemImage: "person.circle")
+                }
         }
-        .padding()
+    }
+    
+    
+    var body: some View {
+        if contentViewModel.isSignedIn, !contentViewModel.currentUserId.isEmpty {
+            accountView
+        }else{
+            LoginView()
+        }
+       
+        
+     
+      
     }
 }
 
